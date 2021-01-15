@@ -1,29 +1,31 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
-import { CardMedia } from "@material-ui/core";
+import Card from "./Card";
+import { Grid } from "@material-ui/core";
 
-const ArticleCard = (props) => {
+const Content = ({ content }) => {
+  const articleCard = (article) => {
+    return (
+      <Grid item xs={12} sm={6} md={4}>
+        {!article.multimedia[0] ? (
+          <Card
+            articleContent={article.abstract}
+            imageUrl="https://picsum.photos/200/300"
+          />
+        ) : (
+          <Card
+            articleContent={article.abstract}
+            imageUrl={article.multimedia[0].url}
+          />
+        )}
+      </Grid>
+    );
+  };
+
   return (
-    <Card style={{ marginTop: "20px" }}>
-      <CardMedia
-        style={{ height: "150px" }}
-        image={`https://www.nytimes.com/${props.imageUrl}`}
-      />
-      <CardContent>
-        <Typography variant="body2" component="p">
-          {props.articleContent}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <FavoriteBorderOutlinedIcon />
-      </CardActions>
-    </Card>
+    <Grid container spacing={2}>
+      {content.map((article) => articleCard(article))}
+    </Grid>
   );
 };
 
-export default ArticleCard;
+export default Content;
