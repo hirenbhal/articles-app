@@ -15,7 +15,7 @@ This project is my submission for Supportgenie's intern hiring.
 
 ## How to access
 
-The application is up and running on Netlify: 
+The application is up and running on Netlify: [Articles-app](https://react-articles-app.netlify.app/)
 
 ## Contact
 
