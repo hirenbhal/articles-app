@@ -1,5 +1,4 @@
 # Articles App
- 
 
 ## Set up a local development environment
 
@@ -19,7 +18,6 @@ The application is up and running on Netlify: [Articles-app](https://react-artic
 
 ## Contact
 
-[Email](iamhiren5@gmail.com)
+Email:**iamhiren5@gmail.com**
 
-[LinkedIn](https://www.linkedin.com/in/hiren-bhal-7658a4199/) 
-
+Connect with me on [LinkedIn](https://www.linkedin.com/in/hiren-bhal-7658a4199/)
